@@ -1,0 +1,43 @@
+<html>
+   <body bgcolor="#ffffe0">
+       <table align="center" border="2" width="50%">
+           <tr>
+               <th rowspan="2"> Idno </th>
+               <th rowspan="2"> Name </th>
+               <th colspan="6"> Marks </th>
+           </tr>
+           <tr>
+
+               <th> subject 1 </th>
+               <th> subject 2 </th>
+               <th> subject 3 </th>
+               <th> subject 4 </th>
+               <th> subject 5 </th>
+               <th> subject 6 </th>
+
+           </tr>
+           {% for record in data %}
+           <tr>
+               <td> {{ record.Idno }} </td>
+               <td> {{ record.Name }} </td>
+
+              {% for subject in record.Marks %}
+                   {% if subject < 35 %}
+                  <td style="background-color: red;color: white;">
+                      {{ subject }}
+                  </td>
+                  {% elif subject == 'A' %}
+                       <td style="background-color: darkblue;color: white;">
+                         {{ subject }}
+                       </td>
+                  {% else %}
+                       <td style="background-color: green;color: white;">
+                         {{ subject }}
+
+                  {% endif %}
+               {% endfor %}
+           </tr>
+           {% endfor %}
+       </table>
+   </body>
+</html>
