@@ -1,33 +1,17 @@
 <html>
-   <head>
-       <title>
-           Login Page
-       </title>
-   </head>
+  <body>
+    <form method="post" action="/register/">
+        {% csrf_token %}
+        <input type="text" placeholder="Firstname" required name="t1">*
 
-   <body>
-     <form method="post" action="/logincheck/">
-         {% csrf_token %}
-         <table align="center" border="2">
-             <tr>
-               <th colspan="2">Login Page</th>
-             </tr>
-             <tr>
-                 <td>UserName</td>
-                 <td><input type="text" placeholder="username" required name="t1"></td>
-             </tr>
-              <tr>
-                  <td>Password</td>
-                  <td><input type="password" placeholder="password" required name="t2"></td>
-              </tr>
-             <tr>
-                 <th colspan="2"><button type="submit">Sign In</button></th>
-             </tr>
-         </table>
+        <br><br>
 
+        <input type="text" placeholder="Lastname" required name="t2">*
 
-     </form>
-   </body>
+        <br><br>
 
-
+        <button type="submit"> Register </button>
+    </form>
+  </body>
 </html>
+

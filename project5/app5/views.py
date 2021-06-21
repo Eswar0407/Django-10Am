@@ -1,17 +1,13 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 def showIndex(request):
-<<<<<<< HEAD
-    return render(request,"demo.html")
-=======
     return render(request,"index.html")
 
-def loginCheck(request):
-    username = request.POST.get("t1")
-    password = request.POST.get("t2")
 
-    if username == "Eswar" and password == "Somavarapu":
-        return request(request,"welcome.html")
-    else:
-        return request(request,"error.html")
->>>>>>> e01526900fb7b26f31a5b9d957298f9b577a70e4
+def registerUser(request):
+    f_name = request.POST.get('t1')
+    l_name = request.POST.get('t2')
+
+    full_name = f_name+" "+l_name
+    return HttpResponse(full_name)
