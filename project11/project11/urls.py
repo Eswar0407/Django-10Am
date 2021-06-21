@@ -1,11 +1,7 @@
-"""project5 URL Configuration
+"""project11 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-<<<<<<< HEAD
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
-=======
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
->>>>>>> e01526900fb7b26f31a5b9d957298f9b577a70e4
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -19,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app5 import views
+from app11 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.showIndex)
+    path('index/', views.showIndex),
     path('logincheck/', views.loginCheck),
+
 ]
