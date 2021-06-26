@@ -1,0 +1,75 @@
+{% load static %}
+<html>
+ <head>
+     <title>Login Page</title>
+     <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+ </head>
+   <body bgcolor="#ffffe0">
+       <table align="center" border="2">
+
+           <tr>
+               <th>
+                   <img src="{% static 'images/download.png' %}" height="100" width="100">
+               </th>
+               <th id="_title">Real Time Reporting</th>
+           </tr>
+
+           <tr>
+               <th colspan="2">
+                   <form method="post" action="">
+                       {% csrf_token %}
+                   <table align="center" border="1">
+                      <tr>
+                          <th colspan="6" id="login_title">
+                              Employee Login Page
+                          </th>
+                      </tr>
+                   <tr>
+                       <th rowspan="7">
+                         <img src="{% static 'images/login.png' %}">
+                       </th>
+                   </tr>
+                   <tr>
+                       <th>
+                         Username
+                       </th>
+                       <th>
+                           <input type="text" required>
+                       </th>
+                   </tr>
+                   <tr>
+                       <th>
+                          Password
+                       </th>
+                       <th>
+                           <input type="password" required>
+                       </th>
+
+                   </tr>
+                       <tr>
+                           <th colspan="6">
+                               <button type="button" onclick="show()">Login</button>
+                           </th>
+                       </tr>
+
+                       <tr>
+                           <th colspan="6" id="forgotpassword">
+                               Forgot Password ?
+                           </th>
+                       </tr>
+                       <tr>
+                           <th colspan="6" id="newuser">
+                               New User Registration
+                           </th>
+                       </tr>
+
+                   </table>
+
+                  </form>
+
+               </th>
+           </tr>
+       </table>
+   <script src="{% static 'js/myscript1.js' %}"></script>
+   </body>
+</html>
