@@ -1,0 +1,23 @@
+{% extends 'common.html' %}
+{% block content %}
+    <h4 align="center">
+       Welocome to Login Page
+    </h4>
+    <table align="center" border="2" style="padding: 10px">
+    <tr>
+          <th>Email</th>
+          <th>
+              <input type="email" placeholder="Email" required>
+          </th>
+       <tr>
+          <th>Password</th>
+          <th>
+              <input type="password" placeholder="password" required>
+          </th>
+    <tr>
+        <th colspan="2">
+            <button type="submit">Login</button>
+        </th>
+    </tr>
+    </table>
+{% endblock %}

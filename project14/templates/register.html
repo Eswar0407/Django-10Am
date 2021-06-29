@@ -1,0 +1,50 @@
+{% extends 'common.html' %}
+{% block content %}
+    <h4 align="center">
+        Registration Page
+    </h4>
+   <table align="center" border="2">
+
+      <tr>
+          <th>Name</th>
+          <th>
+              <input type="text" placeholder="Name" required>
+          </th>
+      </tr>
+       <tr>
+          <th>Contact</th>
+          <th>
+              <input type="number" placeholder="Contact No" required>
+          </th>
+      </tr>
+       <tr>
+          <th>Course</th>
+          <th>
+              <input type="text" placeholder="Course" required>
+          </th>
+      </tr>
+      <tr>
+          <th>Email</th>
+          <th>
+              <input type="email" placeholder="Email" required>
+          </th>
+       <tr>
+          <th>Password</th>
+          <th>
+              <input type="password" placeholder="password" required>
+          </th>
+      </tr>
+      </tr>
+       <tr>
+          <th>Location</th>
+          <th>
+              <input type="text" placeholder="Location" required>
+          </th>
+      </tr>
+      <tr>
+          <th colspan="2" style="text-align: center">
+              <button type="submit">Register</button>
+          </th>
+      </tr>
+    </table>
+{% endblock %}
