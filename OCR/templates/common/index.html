@@ -1,0 +1,35 @@
+{% extends 'common/common.html' %}
+{% block menu %}
+    {% include 'common/menu.html' %}
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+     <div class="container">
+        <div class="row">
+          <div class="col">
+             <img src="{% static 'images/pic.jpg' %}" width="600" height="100%">
+          </div>
+            <div class="col">
+              <div class="wp-block-columns alignwide">
+<div class="wp-block-column">
+<h3 class="has-text-align-center">Quality Results</h3>
+
+
+
+<p>Our goal is to teach the leaders of tomorrow learn to succeed today.&nbsp; We take great pride in providing quality educational services and exceptional customer teachers every single day. We’re absolutely here for you.</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<h3 class="has-text-align-center">Experienced Staff</h3>
+
+
+
+<p>The teachers at ZP High School  work as a team to exceed each your expectations. We have a combined 40+ years of high-level education experience, teaching students be successful in today’s world. Have questions ? Come meet us !</p>
+</div>
+            </div>
+        </div>
+     </div>
+{% endblock %}
