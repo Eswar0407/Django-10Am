@@ -1,50 +1,97 @@
 {% extends 'common.html' %}
+{% block menu %}
+    {% include 'main_menu.html' %}
+{% endblock %}
 {% block content %}
     <h4 align="center">
         Registration Page
     </h4>
-   <table align="center" border="2">
+  <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   <table align="center" border="0">
 
       <tr>
           <th>Name</th>
           <th>
-              <input type="text" placeholder="Name" required>
+              <input type="text"
+                     placeholder="Name"
+                     required
+                     name="name">
           </th>
       </tr>
        <tr>
           <th>Contact</th>
           <th>
-              <input type="number" placeholder="Contact No" required>
+              <input type="number"
+                     placeholder="Contact No"
+                     required
+                     name="contact">
           </th>
       </tr>
        <tr>
           <th>Course</th>
           <th>
-              <input type="text" placeholder="Course" required>
+              <input type="text"
+                     placeholder="Course"
+                     required
+                     name="course">
           </th>
       </tr>
       <tr>
           <th>Email</th>
           <th>
-              <input type="email" placeholder="Email" required>
+              <input type="email"
+                     placeholder="Email"
+                     required
+                     name="email">
           </th>
        <tr>
           <th>Password</th>
           <th>
-              <input type="password" placeholder="password" required>
+              <input type="password"
+                     placeholder="Password"
+                     required
+                     name="password">
           </th>
       </tr>
       </tr>
        <tr>
           <th>Location</th>
           <th>
-              <input type="text" placeholder="Location" required>
+              <input type="text"
+                     placeholder="Location"
+                     required
+                     name="location">
           </th>
       </tr>
+       <tr>
+          <th>Photo</th>
+          <th>
+              <input type="file"
+                     required
+                     name="photo"
+                     width="50" height="50">
+          </th>
+      </tr>
+          <th>DOB</th>
+          <th>
+              <input type="date"
+                     required
+                     name="date">
       <tr>
           <th colspan="2" style="text-align: center">
-              <button type="submit">Register</button>
+              <button type="submit" class="btn-primary">Register</button>
           </th>
       </tr>
+       {% if message %}
+           <tr>
+             <th colspan="2">
+                 <div class="alert alert-danger" role="alert">
+                      {{ message }}
+                 </div>
+             </th>
+           </tr>
+       {% endif %}
     </table>
+  </form>
 {% endblock %}

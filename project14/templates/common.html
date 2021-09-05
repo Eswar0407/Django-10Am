@@ -15,42 +15,20 @@
       <table align="center" border="0" width="90%">
           <tr>
               <th>
-                  <img src="{% static '/satyatech.jpg' %}">
+                  <a class="nav-link active" aria-current="page" href="{% url 'main' %}">
+                    <img src="{% static 'sathya_technolologies_Logo.png' %}">
+                  </a>
               </th>
               <th>
-                  <h1 style="color: darkblue">
+                  <h1 style="color: mediumblue">
                             Sathya Technologies
                   </h1>
               </th>
           <tr>
               <th colspan="2" style="color: white">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-danger main_menu">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Sathya</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/main/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/register/">Registration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Login</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+                  {% block menu %}
+
+                  {% endblock %}
               </th>
           </tr>
           <tr>
@@ -62,7 +40,7 @@
           </tr>
           <tr>
               <th colspan="2" style="text-align: center">
-                  <h5><font color="red">Copyright by Eswar Somavarapu</font></h5>
+                  <h5><font color="black">Copyright by Eswar Somavarapu</font></h5>
               </th>
           </tr>
 

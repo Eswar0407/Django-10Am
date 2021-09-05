@@ -1,0 +1,5 @@
+https://www.jetbrains.com/pycharm/download/
+
+https://www.youtube.com/watch?v=F1G8V_GbqAs(Passing Function name as a Parameter in Python)
+
+https://www.youtube.com/channel/UCgUJI-rmnq8Tut096s-yt1A(Python With Naveen)

@@ -1,0 +1,47 @@
+{% load static  %}
+<html>
+  <body>
+       <table align="center" border="2" width="500">
+          <tr>
+              <th colspan="2">
+                  All Products Information
+                <span style="padding-bottom: 5px">
+                  <img src="{% static 'product_images/shopping-cart.png' %}" width="30" height="30">:{{ cookie }}
+                </span>
+              </th>
+          </tr>
+           <tr>
+               {% for product in All_products %}
+                  <tr>
+                    <th rowspan="4">
+                        <img src="{{ product.photo.url }}" width="150" height="200">
+                    </th>
+                    <th>{{ product.number }}</th>
+                    <tr>
+                        <th>
+                            {{ product.name }}
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                        {{ product.price }}
+                        </th>
+                    </tr>
+                  </tr>
+                   <tr>
+                     <th>
+                         <form action="{% url 'save_cookie' %}">
+                             <input type="hidden" value="{{ product.number }}"name="pno">
+                             <input type="hidden" value="{{ product.name }}"name="pname">
+                          <button type="submit" class="btn-primary" style="background-color: orangered;color: white;border-width: 2px;border-style: solid;border-color: black;border-radius: 10px">
+                              Add To Cart
+                          </button>
+                          </form>
+                     </th>
+                   </tr>
+               {% endfor %}
+           </tr>
+       </table>
+
+  </body>
+</html>

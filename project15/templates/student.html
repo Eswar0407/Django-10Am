@@ -43,7 +43,7 @@
                  <th>{{ student.contact }}</th>
                  <th>
                      {% for course in student.course.all  %}
-                         <p> {{ course.course_name }} Fee: {{ course.course_fee }}</p>
+                         <p> {{ course.course_name }} Fee: {{ course.course_fee }} </p>
                          {% endfor %}
                  </th>
               </tr>

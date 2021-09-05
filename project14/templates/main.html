@@ -1,5 +1,7 @@
 {% extends 'common.html' %}
-
+{% block menu %}
+    {% include 'main_menu.html' %}
+{% endblock %}
 {% block content  %}
     {% load static %}
     <img src="{% static '/course.jpeg' %}" width="80%" height="400">

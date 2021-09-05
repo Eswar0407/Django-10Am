@@ -1,23 +1,44 @@
 {% extends 'common.html' %}
+{% block menu %}
+    {% include 'main_menu.html' %}
+{% endblock %}
+
 {% block content %}
-    <h4 align="center">
-       Welocome to Login Page
-    </h4>
-    <table align="center" border="2" style="padding: 10px">
-    <tr>
-          <th>Email</th>
-          <th>
-              <input type="email" placeholder="Email" required>
+    <div class="container login-page" align="center">
+        <h4 style="padding: 10px">Welcome to Login Page</h4>
+    <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <table align="center" border="0" style="padding: 10px">
+        <tr>
+          <th style="padding: 10px">
+              <input type="email"
+                     placeholder="Email"
+                     required
+                     name="email">
           </th>
+        </tr>
        <tr>
-          <th>Password</th>
-          <th>
-              <input type="password" placeholder="password" required>
+          <th style="padding: 10px">
+              <input type="password"
+                     placeholder="Password"
+                     required
+                     name="password">
           </th>
-    <tr>
-        <th colspan="2">
-            <button type="submit">Login</button>
+      </tr>
+        <th align="center" colspan="2" style="text-align: center">
+            <button type="submit" class="btn-primary">Login</button>
         </th>
     </tr>
+        {% if error_message %}
+           <tr>
+             <th style="text-align: center">
+                 <div class="alert alert-warning" role="alert">
+                      {{ error_message }}
+                 </div>
+             </th>
+           </tr>
+       {% endif %}
     </table>
+    </form>
+    </div>
 {% endblock %}

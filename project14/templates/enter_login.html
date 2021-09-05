@@ -1,0 +1,28 @@
+{% extends 'common.html' %}
+{% block menu %}
+    {% include 'user_menu.html' %}
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+      <table align="center" border="2">
+          <tr>
+                  <th>
+                       <h2>Hello User!!!!!</br>
+                           Welcome to this Webpage</h2>
+                  </th>
+              </th>
+          </tr>
+          <tr>
+              <th>
+                  <a href="{% url 'main' %}">
+                    <h4>Please Go Back To Main Page</h4>
+                  </a>
+              </th>
+          </tr>
+          
+      </table>
+    </form>
+{% endblock %}

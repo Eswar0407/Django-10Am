@@ -19,7 +19,9 @@ from app14 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/',views.showMainpage),
-    path('register/',views.showRegisterpage),
+    path('main/',views.showMainpage,name='main'),
+    path('register/',views.showRegisterpage,name='register'),
     path('userlogin/',views.showLoginpage,name='login'),
+    #path('enterlogin/',views.enterLoginpage,name='enter_login'),
+
 ]

@@ -1,0 +1,25 @@
+
+<html>
+  <body>
+
+     <form action="{% url 'save_employee' %}" method="post">
+         {% csrf_token %}
+
+       <table align="center" border="2">
+           <tr>
+               <th colspan="2">
+                   <h1 style="text-align: center">
+                      Employee Registration
+                   </h1>
+               </th>
+           </tr>
+                   {{ form }}
+           <tr>
+             <th colspan="2">
+               <button type="submit" class="btn_primary"> Submit </button>
+             </th>
+           </tr>
+       </table>
+     </form>
+  </body>
+</html>

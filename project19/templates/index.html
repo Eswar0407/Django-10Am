@@ -1,0 +1,55 @@
+
+<html>
+   <body>
+     <form action="{% url 'save_file' %}" method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+
+      <table align="center" border="2">
+          <tr>
+              <th colspan="2">
+                  Upload File
+              </th>
+          </tr>
+          <tr>
+              <th>
+                  {{ form }}
+              </th>
+          </tr>
+          <tr>
+              <th colspan="2">
+                  <button type="submit" class="btn_primary"> Register </button>
+              </th>
+          </tr>
+      </table>
+     </form>
+     <br>
+     <br>
+     <br>
+
+      <table align="center" border="2">
+          <tr>
+              <th colspan="4">
+                  All Uploaded File List
+              </th>
+          </tr>
+          <tr>
+              <th>File Number</th>
+              <th>File Name</th>
+              <th>File Link to Download</th>
+          </tr>
+          {% for x in data %}
+              <tr>
+              <th>{{ x.number }}</th>
+              <th>{{ x.name }}</th>
+              <th>
+                  <h4>
+                      <a href="{{ x.file.url }}"download>
+                        Download
+                      </a>
+                  </h4>
+              </th>
+          </tr>
+          {% endfor %}
+      </table>
+   </body>
+</html>
